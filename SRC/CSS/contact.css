@@ -1,0 +1,250 @@
+/* Import styles */
+@import url(./footer.css);
+@import url(./header.css);
+
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+/* My root */
+:root {
+  --font-primary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-secondary: "Lexend", sans-serif;
+  --cor-primary: #ffffff;
+  --cor-secondary: #18181b;
+  --cor-tertiary: #0fc3e8;
+  --cor-buttonsinglehover: #0fc3e8d9;
+  --cor-buttonhover: #0fc3e85e;
+}
+
+/* HTML e body */
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-secondary);
+}
+
+/* Main */
+main {
+  flex: 1 1 0%;
+  padding: 1rem;
+  box-sizing: border-box; 
+}
+
+/* Title */
+.title {
+  display: flex;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.title-text {
+  color: var(--cor-primary);
+  font-family: var(--font-secondary);
+  font-size: 2.125rem;
+  font-weight: 600;
+}
+
+/* Article */
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0.5rem 0 0 0;
+}
+
+.form-text {
+  padding: 0.5rem 0;
+}
+
+.text-one {
+  color: var(--cor-primary);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.forms {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  padding: 1.5rem 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-color: #ffffff1a;
+  background-color: rgb(39, 39, 39);
+  border-width: 1px;
+  border-radius: 0.25rem;
+  color: var(--cor-primary);
+}
+
+input {
+  height: 2rem;
+}
+
+textarea {
+  height: 10rem;
+}
+
+.form-control-name {
+  width: 22rem;
+}
+
+.form-control-email {
+  width: 24.4rem;
+}
+
+.form-name {
+  font-family: var(--font-primary);
+  color: var(--cor-primary);
+}
+
+.form-email {
+  font-family: var(--font-primary);
+  color: var(--cor-primary);
+}
+
+.form-mess {
+  font-family: var(--font-primary);
+  color: var(--cor-primary);
+}
+
+.buttons {
+  display: flex;
+  justify-content: end;
+  text-align: center;
+  margin-top: 1.25rem;
+  gap: 1rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--cor-tertiary);
+  background-color: var(--cor-buttonsinglehover);
+  border: 1px solid var(--cor-tertiary);
+  border-radius: 10px;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--cor-primary);
+}
+
+.button:hover {
+  background-color: var(--cor-buttonhover);
+  border: 1px solid var(--cor-buttonhover);
+}
+
+.icon-button {
+  margin-right: 0.35rem;
+}
+
+.form-status {
+  color: var(--cor-primary);
+}
+
+/* Smartphone */
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    background-color: var(--cor-secondary);
+    flex-direction: column;
+  }
+
+  /* Main */
+  main {
+    flex: 1 1 0%;
+    padding: 0.5rem;
+  }
+
+  /* Title */
+  .title {
+    padding: 0.5rem 0;
+  }
+
+  .title-text {
+    font-size: 1.125rem;
+  }
+
+  /* Article */
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.5rem 0 0;
+  }
+
+  .text-one {
+    font-size: 0.75rem;
+  }
+
+  .forms {
+    display: block;
+    gap: 0;
+    padding: 1.5rem 0;
+  }
+
+  .form {
+    padding-top: 0.5rem;
+  }
+
+  label {
+    font-size: 0.75rem;
+  }
+
+  input {
+    height: 1.5rem;
+  }
+
+  textarea {
+    height: 5rem;
+  }
+
+  .form-control-name,
+  .form-control-email {
+    width: 100%;
+  }
+
+  .button {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+  }
+
+  .form-status {
+    color: var(--cor-primary);
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  /* Title */
+  .title {
+    padding: 0.5rem 0;
+  }
+
+  .form-control-name,
+  .form-control-email {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

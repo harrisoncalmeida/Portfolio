@@ -1,0 +1,146 @@
+/* CSS main e image */
+main {
+    flex: 1 1 0%;
+    padding: 1rem;
+}
+
+.main {
+    display: flex;
+    max-width: 48rem;
+    margin: auto;
+}
+
+.image-content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image {
+    border-radius: 15px;
+}
+
+/* CSS text e buttons */
+.text-one {
+    font-family: var(--font-secondary);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--cor-primary);
+}
+
+.text-two {
+    font-family: var(--font-secondary);
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: var(--cor-tertiary);
+    margin-top: 0.5rem;
+}
+
+.text-three {
+    font-family: var(--font-secondary);
+    color: var(--cor-primary);
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 3.25rem;
+    gap: 1rem;
+}
+
+.button-single,
+.button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-primary);
+    border: 1px solid var(--cor-tertiary);
+    border-radius: 10px;
+    padding: 0.75rem 0.75rem;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.button-single {
+    background-color: var(--cor-tertiary);
+}
+
+.button {
+    color: var(--cor-tertiary);
+}
+
+.icon-button {
+    margin-right: 0.35rem;
+}
+
+.button-single:hover {
+    background-color: var(--cor-buttonsinglehover);
+    border-color: var(--cor-buttonhover);
+}
+
+.button:hover {
+    background-color: var(--cor-buttonhover);
+}
+
+.image:hover {
+    animation: rotate 0.75s infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(5deg); }
+}
+
+/* Smartphone */
+@media screen and (max-width: 767px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .image-content {
+        justify-content: center;
+        padding-bottom: 0.75rem;
+    }
+
+    .text-one, 
+    .text-two, 
+    .text-three {
+        text-align: justify;
+        line-height: 1rem;
+        font-size: 0.85rem;
+        margin: 0.75rem 0;
+        word-wrap: break-word;
+    }
+
+    .text-three {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+        margin-top: 2.25rem;
+        gap: 1rem;
+    }
+
+    .button-single,
+    .button {
+        justify-content: center;
+        width: 150px;
+        height: 50px;
+        font-size: 0.75rem;
+        padding: 0 1rem;
+        cursor: pointer;
+    }
+
+    .button i, .button-single i {
+        margin-right: 8px;
+    }
+}
